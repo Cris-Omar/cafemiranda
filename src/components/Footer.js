@@ -3,9 +3,9 @@ import "../style/styles.css"
 import { Link } from 'react-router-dom'
 
 //footer Icons:
-import InstaIcon from "../components/icons/InstaIcon"
-import FacebookIcon from "../components/icons/FacebookIcon"
-import LinkedInIcon from "../components/icons/LinkedInIcon"
+import InstaIcon from "../assets/icons/InstaIcon"
+import FacebookIcon from "../assets/icons/FacebookIcon"
+import LinkedInIcon from "../assets/icons/LinkedInIcon"
 
 export default function Footer() {
 

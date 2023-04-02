@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
-import Xmark from "../components/icons/Xmark"
-import Bars from "../components/icons/Bars"
+import Xmark from "../assets/icons/Xmark"
+import Bars from "../assets/icons/Bars"
 
 export default function Navbar() {
   //Mobile Open & close menuIcon

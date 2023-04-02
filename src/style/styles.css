@@ -1,10 +1,12 @@
 .navbar {
   width: 100%;
   text-align: center;
+  padding-bottom: 40px;
 }
 .navbar .logo img {
   height: 200px;
   width: 200px;
+  padding-bottom: 30px;
 }
 .navbar .menu {
   max-width: 960px;
@@ -108,11 +110,85 @@ body {
   max-width: 1080px;
   height: 70vh;
 }
+.location .frame {
+  margin: auto;
+  width: 850px;
+  height: 850px;
+  border-radius: 3%;
+  overflow: hidden;
+  position: relative;
+}
 
 .contact {
   margin: auto;
   max-width: 1080px;
   height: 70vh;
+}
+.contact .contactForm {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 50px;
+  color: #573621;
+}
+.contact .contactForm p {
+  font-weight: bold;
+}
+.contact .contactForm form {
+  padding: 15px;
+  margin: auto;
+  color: #573621;
+}
+.contact .contactForm form .object {
+  margin: 15px;
+}
+.contact .contactForm form .object label {
+  margin: 10px;
+  display: block;
+  font-weight: bold;
+}
+.contact .contactForm form .object input, .contact .contactForm form .object textarea {
+  min-width: 80%;
+  outline: none;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #573621;
+  color: #FEFE00;
+  line-height: normal;
+  margin: auto;
+  text-align: center;
+}
+.contact .contactForm form .object input:focus, .contact .contactForm form .object textarea:focus {
+  border-bottom: 1px solid black;
+  filter: brightness(1.2);
+}
+.contact .contactForm form .fileUploadIcon {
+  max-width: 200px;
+  margin: auto;
+}
+.contact .contactForm form .fileUploadIcon label {
+  color: white;
+  display: block;
+}
+.contact .contactForm form .fileUploadIcon svg {
+  fill: #573621;
+  width: 80px;
+  margin-top: 15px;
+  margin: 10px 0px 15px 0px;
+}
+.contact .contactForm form .fileUploadIcon svg:hover {
+  cursor: pointer;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+.contact .contactForm form button {
+  width: 30%;
+  max-width: 200px;
+  background-color: #02CC02;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 17px;
 }
 
 .footer {
