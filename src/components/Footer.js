@@ -1,9 +1,26 @@
-import React from "react";
+import React from 'react'
+import "../style/styles.css"
+import { Link } from 'react-router-dom'
+
+//footer Icons:
+import InstaIcon from "../components/icons/InstaIcon"
+import FacebookIcon from "../components/icons/FacebookIcon"
+import LinkedInIcon from "../components/icons/LinkedInIcon"
 
 export default function Footer() {
-  return(
+
+  return (
+
     <div className="footer">
-      <p>Footer</p>
+      <div className='socialMedia'>
+      <li><Link to="_blank" rel="noreferrer" href='https://www.instagram.com/' ><InstaIcon /></Link></li>
+       <li><Link to="_blank" rel="noreferrer" href='https://www.facebook.com/restessbar' ><FacebookIcon /></Link></li>
+       <li><Link to="_blank" rel="noreferrer" href='https://www.linkedin.com/' ><LinkedInIcon /></Link></li>
+     </div>
+
+      <p>
+        Cafe Miranda &copy; 2023
+      </p>
     </div>
   )
 }
