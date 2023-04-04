@@ -9,7 +9,7 @@
   }
 
   .menu {
-    max-width: 960px;
+    max-width: 750px;
     background-color: $green;
     border-radius: max(0px, min(15px, calc((100vw - 4px - 100%) * 9999)));
     margin-top: 10px;
@@ -23,6 +23,7 @@
       color: white;
       text-decoration: none;
       align-items: center;
+      font-weight: bold;
     }
     
     .menuItem {

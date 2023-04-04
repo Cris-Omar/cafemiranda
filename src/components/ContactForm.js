@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import "../style/styles.css"
-import FileUploadIcon from '../assets/icons/FileUploadIcon'
 
 export default function ContactFrom() {
 

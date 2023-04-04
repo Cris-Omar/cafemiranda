@@ -13,9 +13,9 @@ export default function Footer() {
 
     <div className="footer">
       <div className='socialMedia'>
-      <li><Link to="_blank" rel="noreferrer" href='https://www.instagram.com/' ><InstaIcon /></Link></li>
-       <li><Link to="_blank" rel="noreferrer" href='https://www.facebook.com/restessbar' ><FacebookIcon /></Link></li>
-       <li><Link to="_blank" rel="noreferrer" href='https://www.linkedin.com/' ><LinkedInIcon /></Link></li>
+      <li><Link to="https://www.instagram.com/" target="_blank"><InstaIcon /></Link></li>
+       <li><Link to='https://www.facebook.com/restessbar' target="_blank"><FacebookIcon /></Link></li>
+       <li><Link to='https://www.linkedin.com/' target="_blank"><LinkedInIcon /></Link></li>
      </div>
 
       <p>
