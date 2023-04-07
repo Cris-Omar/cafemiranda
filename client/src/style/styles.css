@@ -60,36 +60,38 @@
 
 @media screen and (max-width: 478px) {
   /*bigscreen hide menu items*/
-  .navbar {
-    padding-bottom: 30px;
+  .navbar .menu {
     /*small screen config*/
   }
-  .navbar .menuItem {
+  .navbar .menu .menuItem {
     display: none;
   }
-  .navbar .menuIcon {
+  .navbar .menu .menuIcon {
     display: flex;
     flex-direction: column;
     fill: #573621;
-    font-size: 40px;
     position: absolute;
   }
-  .navbar .menuIcon svg {
+  .navbar .menu .menuIcon svg {
+    margin: auto;
     width: 30px;
   }
-  .navbar .menuIcon .subMenu {
+  .navbar .menu .menuIcon .subMenu {
+    z-index: 999;
     list-style-type: none;
     flex-direction: column;
     position: relative;
     background-color: #FEFE00;
     font-size: 16px;
+    border-radius: 25px;
   }
-  .navbar .menuIcon .subMenu li {
+  .navbar .menu .menuIcon .subMenu li {
     padding: 15px;
     margin: 10px;
   }
-  .navbar .menuIcon .subMenu li a {
-    color: black;
+  .navbar .menu .menuIcon .subMenu li a {
+    font-weight: 530;
+    color: #573621;
   }
 }
 body {
@@ -115,11 +117,12 @@ body {
 }
 .location .frame {
   margin: auto;
-  width: 850px;
-  height: 850px;
+  width: 80%;
+  height: 80%;
   border-radius: 3%;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .contact {

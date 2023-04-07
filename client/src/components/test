@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import Xmark from "../assets/icons/Xmark"
 import Bars from "../assets/icons/Bars"
 
@@ -9,7 +9,7 @@ export default function Navbar() {
   const handleClick = () => setClick(!click)
   //Mobile dropdown handle Open
   const [mobOpen, setMobOpen] = useState(false)
-  const handleMobOpen = () => { setMobOpen(!mobOpen) }
+  const handleMobOpen = () => {setMobOpen(!mobOpen)}
 
   // Ref for the menu icon to check if click occurred inside the menu or submenu
   const menuIconRef = useRef(null);
@@ -18,22 +18,20 @@ export default function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (mobOpen && !menuIconRef.current.contains(event.target)) {
-        menuIconRef.current.releasePointerCapture(event.pointerId);
         setMobOpen(false);
-        setClick(false);
       }
     };
-    document.addEventListener("pointerdown", handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
 
     return () => {
-      document.removeEventListener("pointerdown", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [mobOpen]);
 
-  return (
+  return(
     <div className='navbar'>
       <div className='logo'>
-        <img src="/logo.png" alt="Logo" />
+        <img src="/logo.png" alt="Logo"/>
       </div>
 
       <div className='menu'>
@@ -41,14 +39,14 @@ export default function Navbar() {
         <div className='menuItem'><Link to="/location" >locacion</Link></div>
         <div className='menuItem'><Link to="/contact">contacto</Link></div>
 
-        <div className='menuIcon' onClick={() => { handleClick(); handleMobOpen(); }} ref={menuIconRef}>
+        <div className='menuIcon' onClick= {() => {handleClick(); handleMobOpen();}} ref={menuIconRef}>
           {click ? <Xmark /> : <Bars />}
           {mobOpen && (
-            <div className='subMenu'>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/location" >locacion</Link></li>
-              <li><Link to="/contact">contacto</Link></li>
-            </div>
+          <div className='subMenu'>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/location" >locacion</Link></li>
+            <li><Link to="/contact">contacto</Link></li>
+          </div>
           )}
         </div>
       </div>

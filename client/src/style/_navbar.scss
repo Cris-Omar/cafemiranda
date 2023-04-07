@@ -67,35 +67,37 @@
 @media screen and (max-width: 478px) {
   /*bigscreen hide menu items*/
   .navbar {
-    padding-bottom: 30px;
-
-    .menuItem {
-      display: none;
-    }
-    
-    /*small screen config*/
-    .menuIcon {
-      display: flex;
-      flex-direction: column;
-      fill: $brown;
-      font-size: 40px;
-      position: absolute;
-      svg{
-        width: 30px;
+    .menu{
+      .menuItem {
+        display: none;
       }
-
-      .subMenu {
-        list-style-type: none;
+      
+      /*small screen config*/
+      .menuIcon {
+        display: flex;
         flex-direction: column;
-        position: relative;
-        background-color: $yellow;
-        font-size: 16px;             
+        fill: $brown;
+        position: absolute;
+        svg{
+          margin: auto;
+          width: 30px;
+        }
 
-        li {
-          padding: 15px;
-          margin: 10px;
-          a{
-            color: black;
+        .subMenu {    
+          z-index: 999;
+          list-style-type: none;
+          flex-direction: column;
+          position: relative;
+          background-color: $yellow;
+          font-size: 16px;
+          border-radius: 25px;
+          li {
+            padding: 15px;
+            margin: 10px;
+            a{
+              font-weight: 530;
+              color: $brown;
+            }
           }
         }
       }
