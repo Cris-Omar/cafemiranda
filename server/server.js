@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "support@cafe-miranda.com",
-    pass: ")=4QzwT4!!sh4zY5Mulx?",
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
