@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
@@ -23,11 +25,13 @@ app.get("/", (req, res) => {
 });
 
 app.post("/post", (req, res) => {
+  
   const mailOptions = {
-    from: req.body.email,
+    from: "support@cafe-miranda.com",
     to: "info@cafe-miranda.com",
     subject: req.body.subject,
-    text: `From: ${req.body.email} \n\n ${req.body.message}`,
+    text: `as recibido un nuevo Mensajé sobre el formulario de contacte de la pagina Web:
+    \n\n de: ${req.body.name} \n\n email: ${req.body.email} \n\n sujeto: ${req.body.subject} \n\nmensage:${req.body.message}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

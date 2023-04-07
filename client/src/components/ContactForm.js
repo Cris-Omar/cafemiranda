@@ -8,9 +8,15 @@ export default function ContactFrom() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
 
     try{
       let res = await fetch("/post", {
@@ -30,7 +36,7 @@ export default function ContactFrom() {
 
       if (data.status === "success") {
         alert(
-          "su mensaje a sido transferido, lo contactaremos en menos de 24 horas."
+          "su mensaje a side transferido! \n\n muchas gracias por su mensage"
         )
         setName("");
         setEmail("");
@@ -58,7 +64,7 @@ export default function ContactFrom() {
         </div>
         <div className='object'>
           <label>email</label>
-          <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
         <div className='object'>
           <label>asunto</label>
