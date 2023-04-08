@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/location" element={<Location />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
         </Routes>
 
         <Footer/>

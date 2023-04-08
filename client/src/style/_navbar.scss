@@ -35,14 +35,6 @@
       border-radius: 25%;
       position: relative;
       transition: 0.6s;
-      svg{
-        fill: white;
-        width: 12px;
-        &:hover {
-          transition-timing-function: ease;
-          transition-duration: 0.6s;
-        }
-      }
 
       &:hover {
         cursor: pointer;
@@ -53,6 +45,7 @@
         transition-timing-function: ease;
         transition-duration: 0.6s;
         font-size: 18px;
+        color: $brown;
       }
     }
   }
@@ -78,9 +71,13 @@
         flex-direction: column;
         fill: $brown;
         position: absolute;
+        transition: transform 3s ease;
         svg{
           margin: auto;
           width: 30px;
+        }
+        .menuIcon .clicked > svg {
+          transition: transform 3s ease;
         }
 
         .subMenu {    

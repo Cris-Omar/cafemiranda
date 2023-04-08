@@ -1,3 +1,4 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
 .navbar {
   width: 100%;
   text-align: center;
@@ -35,14 +36,6 @@
   position: relative;
   transition: 0.6s;
 }
-.navbar .menu .menuItem svg {
-  fill: white;
-  width: 12px;
-}
-.navbar .menu .menuItem svg:hover {
-  transition-timing-function: ease;
-  transition-duration: 0.6s;
-}
 .navbar .menu .menuItem:hover {
   cursor: pointer;
   filter: brightness(1.2);
@@ -51,6 +44,7 @@
   transition-timing-function: ease;
   transition-duration: 0.6s;
   font-size: 18px;
+  color: #573621;
 }
 
 /* display none for Mobile only*/
@@ -71,10 +65,14 @@
     flex-direction: column;
     fill: #573621;
     position: absolute;
+    transition: transform 3s ease;
   }
   .navbar .menu .menuIcon svg {
     margin: auto;
     width: 30px;
+  }
+  .navbar .menu .menuIcon .menuIcon .clicked > svg {
+    transition: transform 3s ease;
   }
   .navbar .menu .menuIcon .subMenu {
     z-index: 999;
@@ -102,6 +100,12 @@ body {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.error {
+  margin: auto;
+  max-width: 1080px;
+  height: 70vh;
 }
 
 .home {
@@ -233,6 +237,7 @@ body {
   cursor: pointer;
   transition-timing-function: ease;
   transition-duration: 0.6s;
+  fill: #573621;
 }
 .footer p {
   font-size: 17px;

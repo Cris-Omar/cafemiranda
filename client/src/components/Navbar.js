@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className='menuItem'><Link to="/location" >locacion</Link></div>
         <div className='menuItem'><Link to="/contact">contacto</Link></div>
 
-        <div className='menuIcon' onClick={() => { handleClick(); handleMobOpen(); }} ref={menuIconRef}>
+        <div className='menuIcon clicked' onClick={() => { handleClick(); handleMobOpen(); }} ref={menuIconRef}>
           {click ? <Xmark /> : <Bars />}
           {mobOpen && (
             <div className='subMenu'>

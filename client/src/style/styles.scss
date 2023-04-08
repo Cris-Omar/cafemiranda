@@ -3,6 +3,7 @@ $yellow: #FEFE00;
 $brown: #573621;
 
 @import "./navbar";
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 body {
   margin: 0;
@@ -16,6 +17,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+//_____________________ Error
+.error {
+  margin: auto;
+  max-width: 1080px;
+  height: 70vh;
+}
+
 //_____________________ Home
 .home {
   margin: auto;
@@ -23,6 +31,7 @@ body {
   height: 70vh;
 }
 
+//_____________________ location
 .location{
   margin: auto;
   max-width: 1080px;
@@ -40,6 +49,7 @@ body {
   }
 }
 
+//_____________________ contact
 .contact{
   margin: auto;
   max-width: 1080px;
@@ -147,6 +157,7 @@ body {
         cursor: pointer;
         transition-timing-function: ease;
         transition-duration: 0.6s;
+
       }
 
       svg {
@@ -159,6 +170,7 @@ body {
           cursor: pointer;
           transition-timing-function: ease;
           transition-duration: 0.6s;
+          fill: $brown;
         }
       }
     }
