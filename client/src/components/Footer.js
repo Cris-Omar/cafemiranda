@@ -18,6 +18,12 @@ export default function Footer() {
        <li><Link to='https://www.linkedin.com/' target="_blank"><LinkedInIcon /></Link></li>
      </div>
 
+     <div className='otherLinks'>
+      <li><Link to="/delivery">envios</Link></li>
+      <li><Link to="/jobs">trabajo</Link></li>
+      <li><Link to="/team">equipo</Link></li>
+     </div>
+
       <p>
         Café Miranda &copy; 2023
       </p>

@@ -114,6 +114,44 @@ body {
   height: 70vh;
 }
 
+.delivery {
+  margin: auto;
+  max-width: 1080px;
+  height: 70vh;
+  color: #573621;
+}
+
+.team {
+  margin: auto;
+  max-width: 800px;
+  height: 70vh;
+  color: #573621;
+}
+.team .teamMember {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.team .teamMember img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+.team .teamMember .memberInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.jobs {
+  margin: auto;
+  max-width: 1080px;
+  height: 70vh;
+  color: #573621;
+}
+
 .location {
   margin: auto;
   max-width: 1080px;
@@ -172,33 +210,18 @@ body {
   border-bottom: 1px solid black;
   filter: brightness(1.2);
 }
-.contact .contactForm form .fileUploadIcon {
-  max-width: 200px;
-  margin: auto;
-}
-.contact .contactForm form .fileUploadIcon label {
-  color: white;
-  display: block;
-}
-.contact .contactForm form .fileUploadIcon svg {
-  fill: #573621;
-  width: 80px;
-  margin-top: 15px;
-  margin: 10px 0px 15px 0px;
-}
-.contact .contactForm form .fileUploadIcon svg:hover {
-  cursor: pointer;
-  transition-timing-function: ease;
-  transition-duration: 0.6s;
-}
 .contact .contactForm form button {
-  width: 30%;
-  max-width: 200px;
+  width: 20%;
+  padding: 5px;
   background-color: #02CC02;
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 17px;
+  font-weight: 600;
+}
+.contact .contactForm form button:hover {
+  color: #573621;
 }
 
 .footer {
@@ -238,6 +261,22 @@ body {
   transition-timing-function: ease;
   transition-duration: 0.6s;
   fill: #573621;
+}
+.footer .otherLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+.footer .otherLinks li {
+  padding: 10px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover {
+  color: #573621;
 }
 .footer p {
   font-size: 17px;

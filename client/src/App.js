@@ -6,6 +6,9 @@ import Footer from "./components/Footer"
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
+import Delivery from "./pages/Delivery";
+import Team from "./pages/Team"
+import Jobs from "./pages/Jobs"
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/location" element={<Location />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="team" element={<Team />} />
           <Route path="*" element={<Error />} />
         </Routes>
 
